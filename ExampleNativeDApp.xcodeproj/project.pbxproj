@@ -7,27 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23F6501A7D2085D9244AC1B7 /* Pods_Shared_ExampleNativeDApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F50E315F8C1C8873A5712B /* Pods_Shared_ExampleNativeDApp.framework */; };
+		D31247F3209E459A00981CCD /* AuthScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31247F2209E459A00981CCD /* AuthScene.swift */; };
+		D31247F4209E487300981CCD /* AuthScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D31247F1209E458900981CCD /* AuthScene.sks */; };
+		D31247F6209E5E4300981CCD /* BitskiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31247F5209E5E4300981CCD /* BitskiProvider.swift */; };
+		D31247F8209E646C00981CCD /* EthereumCallFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31247F7209E646C00981CCD /* EthereumCallFunction.swift */; };
+		D31247FA209E680100981CCD /* LimitedMintableNonFungibleToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31247F9209E680100981CCD /* LimitedMintableNonFungibleToken.swift */; };
+		D37B21E5209F9E240067810B /* CrewScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B21E4209F9E240067810B /* CrewScene.swift */; };
+		D37B21E7209FA05F0067810B /* Bitski+StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B21E6209FA05F0067810B /* Bitski+StoreKit.swift */; };
+		D37B21E9209FA8330067810B /* StoreKitEthereumTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B21E8209FA8330067810B /* StoreKitEthereumTransaction.swift */; };
 		D3B9CFB6209E19550019D863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9CFB5209E19550019D863 /* AppDelegate.swift */; };
-		D3B9CFB8209E19550019D863 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFB7209E19550019D863 /* GameScene.sks */; };
-		D3B9CFBA209E19550019D863 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFB9209E19550019D863 /* Actions.sks */; };
-		D3B9CFBC209E19550019D863 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9CFBB209E19550019D863 /* GameScene.swift */; };
 		D3B9CFBE209E19550019D863 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9CFBD209E19550019D863 /* GameViewController.swift */; };
 		D3B9CFC1209E19550019D863 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFBF209E19550019D863 /* Main.storyboard */; };
 		D3B9CFC3209E19570019D863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFC2209E19570019D863 /* Assets.xcassets */; };
 		D3B9CFC6209E19570019D863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFC4209E19570019D863 /* LaunchScreen.storyboard */; };
+		D3B9CFD6209E1AE30019D863 /* BitskiSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D3B9CFD4209E1AE30019D863 /* BitskiSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3B9CFD9209E1AE30019D863 /* BitskiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B9CFD2209E1AE30019D863 /* BitskiSDK.framework */; };
+		D3B9CFDA209E1AE30019D863 /* BitskiSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3B9CFD2209E1AE30019D863 /* BitskiSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3B9CFE0209E38410019D863 /* Bitski.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9CFDF209E38410019D863 /* Bitski.swift */; };
+		D3B9CFE2209E43940019D863 /* BootScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFE1209E43940019D863 /* BootScene.sks */; };
+		D3B9CFE4209E439C0019D863 /* BootScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9CFE3209E439C0019D863 /* BootScene.swift */; };
+		E249AE452844923C83892111 /* Pods_Shared_BitskiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B7DA7C238BCD8CAD019B71 /* Pods_Shared_BitskiSDK.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D3B9CFD7209E1AE30019D863 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3B9CFAA209E19550019D863 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3B9CFD1209E1AE30019D863;
+			remoteInfo = BitskiSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3B9CFDE209E1AE30019D863 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3B9CFDA209E1AE30019D863 /* BitskiSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		090DB9CE77B10D584013476F /* Pods-Shared-ExampleNativeDApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ExampleNativeDApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-ExampleNativeDApp/Pods-Shared-ExampleNativeDApp.release.xcconfig"; sourceTree = "<group>"; };
+		26E9AE34ADC3D75B1EC0AB33 /* Pods-Shared-ExampleNativeDApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ExampleNativeDApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-ExampleNativeDApp/Pods-Shared-ExampleNativeDApp.debug.xcconfig"; sourceTree = "<group>"; };
+		60F50E315F8C1C8873A5712B /* Pods_Shared_ExampleNativeDApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_ExampleNativeDApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E3F501DD61F4A7BCC9B7F9E /* Pods-ExampleNativeDApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleNativeDApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleNativeDApp/Pods-ExampleNativeDApp.release.xcconfig"; sourceTree = "<group>"; };
+		A5F441B811E78D71F8F61E5A /* Pods-Shared-BitskiSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-BitskiSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-BitskiSDK/Pods-Shared-BitskiSDK.release.xcconfig"; sourceTree = "<group>"; };
+		BBA5B4C74234F9EEB574F5EF /* Pods-Shared-BitskiSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-BitskiSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-BitskiSDK/Pods-Shared-BitskiSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		C1B7DA7C238BCD8CAD019B71 /* Pods_Shared_BitskiSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_BitskiSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D2D6DC58AE2168C36EB3CF /* Pods-ExampleNativeDApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleNativeDApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleNativeDApp/Pods-ExampleNativeDApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D31247F1209E458900981CCD /* AuthScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AuthScene.sks; sourceTree = "<group>"; };
+		D31247F2209E459A00981CCD /* AuthScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScene.swift; sourceTree = "<group>"; };
+		D31247F5209E5E4300981CCD /* BitskiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitskiProvider.swift; sourceTree = "<group>"; };
+		D31247F7209E646C00981CCD /* EthereumCallFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumCallFunction.swift; sourceTree = "<group>"; };
+		D31247F9209E680100981CCD /* LimitedMintableNonFungibleToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedMintableNonFungibleToken.swift; sourceTree = "<group>"; };
+		D37B21E4209F9E240067810B /* CrewScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewScene.swift; sourceTree = "<group>"; };
+		D37B21E6209FA05F0067810B /* Bitski+StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bitski+StoreKit.swift"; sourceTree = "<group>"; };
+		D37B21E8209FA8330067810B /* StoreKitEthereumTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitEthereumTransaction.swift; sourceTree = "<group>"; };
 		D3B9CFB2209E19550019D863 /* ExampleNativeDApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleNativeDApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B9CFB5209E19550019D863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3B9CFB7209E19550019D863 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		D3B9CFB9209E19550019D863 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		D3B9CFBB209E19550019D863 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D3B9CFBD209E19550019D863 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D3B9CFC0209E19550019D863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3B9CFC2209E19570019D863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3B9CFC5209E19570019D863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3B9CFC7209E19570019D863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B9CFD2209E1AE30019D863 /* BitskiSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitskiSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B9CFD4209E1AE30019D863 /* BitskiSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitskiSDK.h; sourceTree = "<group>"; };
+		D3B9CFD5209E1AE30019D863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B9CFDF209E38410019D863 /* Bitski.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitski.swift; sourceTree = "<group>"; };
+		D3B9CFE1209E43940019D863 /* BootScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BootScene.sks; sourceTree = "<group>"; };
+		D3B9CFE3209E439C0019D863 /* BootScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +91,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B9CFD9209E1AE30019D863 /* BitskiSDK.framework in Frameworks */,
+				23F6501A7D2085D9244AC1B7 /* Pods_Shared_ExampleNativeDApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B9CFCE209E1AE30019D863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E249AE452844923C83892111 /* Pods_Shared_BitskiSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B7BB5761C6B20CC4BFD9A03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60F50E315F8C1C8873A5712B /* Pods_Shared_ExampleNativeDApp.framework */,
+				C1B7DA7C238BCD8CAD019B71 /* Pods_Shared_BitskiSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D30AA9203B2C87CF6119B57B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9D2D6DC58AE2168C36EB3CF /* Pods-ExampleNativeDApp.debug.xcconfig */,
+				9E3F501DD61F4A7BCC9B7F9E /* Pods-ExampleNativeDApp.release.xcconfig */,
+				26E9AE34ADC3D75B1EC0AB33 /* Pods-Shared-ExampleNativeDApp.debug.xcconfig */,
+				090DB9CE77B10D584013476F /* Pods-Shared-ExampleNativeDApp.release.xcconfig */,
+				BBA5B4C74234F9EEB574F5EF /* Pods-Shared-BitskiSDK.debug.xcconfig */,
+				A5F441B811E78D71F8F61E5A /* Pods-Shared-BitskiSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D3B9CFA9209E19550019D863 = {
 			isa = PBXGroup;
 			children = (
 				D3B9CFB4209E19550019D863 /* ExampleNativeDApp */,
+				D3B9CFD3209E1AE30019D863 /* BitskiSDK */,
 				D3B9CFB3209E19550019D863 /* Products */,
+				D30AA9203B2C87CF6119B57B /* Pods */,
+				7B7BB5761C6B20CC4BFD9A03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B9CFB2209E19550019D863 /* ExampleNativeDApp.app */,
+				D3B9CFD2209E1AE30019D863 /* BitskiSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +153,12 @@
 			isa = PBXGroup;
 			children = (
 				D3B9CFB5209E19550019D863 /* AppDelegate.swift */,
-				D3B9CFB7209E19550019D863 /* GameScene.sks */,
-				D3B9CFB9209E19550019D863 /* Actions.sks */,
-				D3B9CFBB209E19550019D863 /* GameScene.swift */,
+				D31247F1209E458900981CCD /* AuthScene.sks */,
+				D31247F2209E459A00981CCD /* AuthScene.swift */,
+				D3B9CFE1209E43940019D863 /* BootScene.sks */,
+				D3B9CFE3209E439C0019D863 /* BootScene.swift */,
+				D37B21E4209F9E240067810B /* CrewScene.swift */,
+				D31247F9209E680100981CCD /* LimitedMintableNonFungibleToken.swift */,
 				D3B9CFBD209E19550019D863 /* GameViewController.swift */,
 				D3B9CFBF209E19550019D863 /* Main.storyboard */,
 				D3B9CFC2209E19570019D863 /* Assets.xcassets */,
@@ -73,25 +168,75 @@
 			path = ExampleNativeDApp;
 			sourceTree = "<group>";
 		};
+		D3B9CFD3209E1AE30019D863 /* BitskiSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D3B9CFD4209E1AE30019D863 /* BitskiSDK.h */,
+				D3B9CFDF209E38410019D863 /* Bitski.swift */,
+				D37B21E6209FA05F0067810B /* Bitski+StoreKit.swift */,
+				D37B21E8209FA8330067810B /* StoreKitEthereumTransaction.swift */,
+				D31247F7209E646C00981CCD /* EthereumCallFunction.swift */,
+				D31247F5209E5E4300981CCD /* BitskiProvider.swift */,
+				D3B9CFD5209E1AE30019D863 /* Info.plist */,
+			);
+			path = BitskiSDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D3B9CFCF209E1AE30019D863 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B9CFD6209E1AE30019D863 /* BitskiSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D3B9CFB1209E19550019D863 /* ExampleNativeDApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3B9CFCA209E19570019D863 /* Build configuration list for PBXNativeTarget "ExampleNativeDApp" */;
 			buildPhases = (
+				33CA1180908134702B752A0D /* [CP] Check Pods Manifest.lock */,
 				D3B9CFAE209E19550019D863 /* Sources */,
 				D3B9CFAF209E19550019D863 /* Frameworks */,
 				D3B9CFB0209E19550019D863 /* Resources */,
+				7C4B4384115A42646E2105BD /* [CP] Embed Pods Frameworks */,
+				F8C006995DB8303D6645E3FF /* [CP] Copy Pods Resources */,
+				D3B9CFDE209E1AE30019D863 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D3B9CFD8209E1AE30019D863 /* PBXTargetDependency */,
 			);
 			name = ExampleNativeDApp;
 			productName = ExampleNativeDApp;
 			productReference = D3B9CFB2209E19550019D863 /* ExampleNativeDApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D3B9CFD1209E1AE30019D863 /* BitskiSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3B9CFDD209E1AE30019D863 /* Build configuration list for PBXNativeTarget "BitskiSDK" */;
+			buildPhases = (
+				0CDEC03CAFB39ED6C6D3F8D1 /* [CP] Check Pods Manifest.lock */,
+				D3B9CFCD209E1AE30019D863 /* Sources */,
+				D3B9CFCE209E1AE30019D863 /* Frameworks */,
+				D3B9CFCF209E1AE30019D863 /* Headers */,
+				D3B9CFD0209E1AE30019D863 /* Resources */,
+				4BCC1077215E10616A22F013 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitskiSDK;
+			productName = BitskiSDK;
+			productReference = D3B9CFD2209E1AE30019D863 /* BitskiSDK.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,6 +250,10 @@
 				TargetAttributes = {
 					D3B9CFB1209E19550019D863 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					D3B9CFD1209E1AE30019D863 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -122,6 +271,7 @@
 			projectRoot = "";
 			targets = (
 				D3B9CFB1209E19550019D863 /* ExampleNativeDApp */,
+				D3B9CFD1209E1AE30019D863 /* BitskiSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -131,28 +281,155 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D31247F4209E487300981CCD /* AuthScene.sks in Resources */,
 				D3B9CFC1209E19550019D863 /* Main.storyboard in Resources */,
-				D3B9CFB8209E19550019D863 /* GameScene.sks in Resources */,
+				D3B9CFE2209E43940019D863 /* BootScene.sks in Resources */,
 				D3B9CFC3209E19570019D863 /* Assets.xcassets in Resources */,
 				D3B9CFC6209E19570019D863 /* LaunchScreen.storyboard in Resources */,
-				D3B9CFBA209E19550019D863 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B9CFD0209E1AE30019D863 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CDEC03CAFB39ED6C6D3F8D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shared-BitskiSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33CA1180908134702B752A0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shared-ExampleNativeDApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BCC1077215E10616A22F013 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shared-BitskiSDK/Pods-Shared-BitskiSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C4B4384115A42646E2105BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shared-ExampleNativeDApp/Pods-Shared-ExampleNativeDApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/BigInt.swift/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Web3/Web3.framework",
+				"${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Web3.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shared-ExampleNativeDApp/Pods-Shared-ExampleNativeDApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8C006995DB8303D6645E3FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shared-ExampleNativeDApp/Pods-Shared-ExampleNativeDApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3B9CFAE209E19550019D863 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3B9CFBC209E19550019D863 /* GameScene.swift in Sources */,
+				D3B9CFE4209E439C0019D863 /* BootScene.swift in Sources */,
 				D3B9CFBE209E19550019D863 /* GameViewController.swift in Sources */,
+				D31247F3209E459A00981CCD /* AuthScene.swift in Sources */,
+				D37B21E5209F9E240067810B /* CrewScene.swift in Sources */,
 				D3B9CFB6209E19550019D863 /* AppDelegate.swift in Sources */,
+				D31247FA209E680100981CCD /* LimitedMintableNonFungibleToken.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B9CFCD209E1AE30019D863 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31247F8209E646C00981CCD /* EthereumCallFunction.swift in Sources */,
+				D31247F6209E5E4300981CCD /* BitskiProvider.swift in Sources */,
+				D37B21E7209FA05F0067810B /* Bitski+StoreKit.swift in Sources */,
+				D3B9CFE0209E38410019D863 /* Bitski.swift in Sources */,
+				D37B21E9209FA8330067810B /* StoreKitEthereumTransaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3B9CFD8209E1AE30019D863 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3B9CFD1209E1AE30019D863 /* BitskiSDK */;
+			targetProxy = D3B9CFD7209E1AE30019D863 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D3B9CFBF209E19550019D863 /* Main.storyboard */ = {
@@ -290,7 +567,9 @@
 		};
 		D3B9CFCB209E19570019D863 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26E9AE34ADC3D75B1EC0AB33 /* Pods-Shared-ExampleNativeDApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TM2623B5AA;
@@ -308,7 +587,9 @@
 		};
 		D3B9CFCC209E19570019D863 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090DB9CE77B10D584013476F /* Pods-Shared-ExampleNativeDApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TM2623B5AA;
@@ -321,6 +602,67 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3B9CFDB209E1AE30019D863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBA5B4C74234F9EEB574F5EF /* Pods-Shared-BitskiSDK.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TM2623B5AA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BitskiSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.outtherelabs.BitskiSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3B9CFDC209E1AE30019D863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5F441B811E78D71F8F61E5A /* Pods-Shared-BitskiSDK.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TM2623B5AA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BitskiSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.outtherelabs.BitskiSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -341,6 +683,15 @@
 			buildConfigurations = (
 				D3B9CFCB209E19570019D863 /* Debug */,
 				D3B9CFCC209E19570019D863 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3B9CFDD209E1AE30019D863 /* Build configuration list for PBXNativeTarget "BitskiSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3B9CFDB209E1AE30019D863 /* Debug */,
+				D3B9CFDC209E1AE30019D863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
