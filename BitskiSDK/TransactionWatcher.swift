@@ -49,7 +49,7 @@ public class TransactionWatcher {
     private(set) public var blockNumber: EthereumQuantity?
     private(set) public var currentBlock: EthereumQuantity?
     
-    public var expectedConfirmations: Int = 24
+    public var expectedConfirmations: Int = 6
     public var pollInterval: TimeInterval = 2.0
     
     private let web3: Web3

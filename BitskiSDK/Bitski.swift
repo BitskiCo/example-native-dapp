@@ -64,6 +64,8 @@ public class Bitski {
         OIDAuthorizationService.discoverConfiguration(forIssuer: issuer) { (configuration, error) in
             if let configuration = configuration {
                 self.signIn(viewController: viewController, configuration: configuration, completion: completion)
+            } else if let error = error {
+                print("Error signing in:", error)
             }
         }
     }

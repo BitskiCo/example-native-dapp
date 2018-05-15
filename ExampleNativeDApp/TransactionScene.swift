@@ -44,7 +44,7 @@ class TransactionScene: SKScene {
         case .pending:
             labelNode?.text = "Waiting for confirmation"
         case .approved(let times):
-            labelNode?.text = "Received confirmation \(times) / 24"
+            labelNode?.text = "Received confirmation \(times) / \(transactionWatcher?.expectedConfirmations ?? 6)"
         case .failed:
             labelNode?.text = "Transaction failed"
         case .successful:

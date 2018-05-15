@@ -45,11 +45,16 @@ class CrewScene: SKScene {
         self.web3 = web3
         self.tokenContract = contract
         self.currentAccount = currentAccount
+        if tokens.count >= 5 {
+            getMoreNode.isHidden = true
+        }
         if let node = childNode(withName: "Title") as? SKLabelNode {
             if tokens.count == 0 {
                 node.text = "You don't have any guys yet!"
             } else if tokens.count == 1 {
                 node.text = "You have one guy"
+            } else if tokens.count == 5 {
+                node.text = "You have a complete crew! Yay!"
             } else {
                 node.text = "You have \(tokens.count) guys"
             }
@@ -93,7 +98,7 @@ class CrewScene: SKScene {
     }
     
     func getMore() {
-        guard let contract = tokenContract, let currentAccount = currentAccount, let web3 = web3 else {
+        guard let contract = tokenContract, let currentAccount = currentAccount else {
             return assertionFailure()
         }
         firstly {

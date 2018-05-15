@@ -20,6 +20,10 @@ class GameViewController: UIViewController {
     
     func signIn() {
         bitski.signIn(viewController: self) { (accessToken, error) in
+            if let error = error {
+                print(error)
+            }
+            
             let web3 = self.bitski.getWeb3(network: "kovan")
             let contract = LimitedMintableNonFungibleToken(web3: web3)
             
