@@ -28,6 +28,19 @@
 		D3B9CFE2209E43940019D863 /* BootScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFE1209E43940019D863 /* BootScene.sks */; };
 		D3B9CFE4209E439C0019D863 /* BootScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9CFE3209E439C0019D863 /* BootScene.swift */; };
 		E249AE452844923C83892111 /* Pods_Shared_BitskiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B7DA7C238BCD8CAD019B71 /* Pods_Shared_BitskiSDK.framework */; };
+		E81606F120AA543600750E3E /* BigUInt+Ethereum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606F020AA543600750E3E /* BigUInt+Ethereum.swift */; };
+		E81606F320AA5B0700750E3E /* EthereumContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606F220AA5B0700750E3E /* EthereumContract.swift */; };
+		E81606F520AA603400750E3E /* UnitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606F420AA603400750E3E /* UnitScene.swift */; };
+		E81606F720AA604200750E3E /* UnitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E81606F620AA604200750E3E /* UnitScene.sks */; };
+		E81606F920AA79EF00750E3E /* TransactionWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606F820AA79EF00750E3E /* TransactionWatcher.swift */; };
+		E81606FB20AAAB0700750E3E /* TransactionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606FA20AAAB0700750E3E /* TransactionScene.swift */; };
+		E81606FD20AAAD7800750E3E /* TransactionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E81606FC20AAAD7800750E3E /* TransactionScene.sks */; };
+		E81606FF20AAB9B300750E3E /* NeedFundsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */; };
+		E816070120AAB9C200750E3E /* NeedFundsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E816070020AAB9C200750E3E /* NeedFundsScene.sks */; };
+		E8F84D6920A77F93003E9F8E /* CrewScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8F84D6820A77F93003E9F8E /* CrewScene.sks */; };
+		E8F84D6B20A78130003E9F8E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F84D6A20A78130003E9F8E /* Parser.swift */; };
+		E8F84D6D20A79E2E003E9F8E /* Eth+SendTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F84D6C20A79E2E003E9F8E /* Eth+SendTransaction.swift */; };
+		E8F84D6F20A7C3B7003E9F8E /* RandomHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F84D6E20A7C3B7003E9F8E /* RandomHex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +97,19 @@
 		D3B9CFDF209E38410019D863 /* Bitski.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitski.swift; sourceTree = "<group>"; };
 		D3B9CFE1209E43940019D863 /* BootScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BootScene.sks; sourceTree = "<group>"; };
 		D3B9CFE3209E439C0019D863 /* BootScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootScene.swift; sourceTree = "<group>"; };
+		E81606F020AA543600750E3E /* BigUInt+Ethereum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigUInt+Ethereum.swift"; sourceTree = "<group>"; };
+		E81606F220AA5B0700750E3E /* EthereumContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumContract.swift; sourceTree = "<group>"; };
+		E81606F420AA603400750E3E /* UnitScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitScene.swift; sourceTree = "<group>"; };
+		E81606F620AA604200750E3E /* UnitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = UnitScene.sks; sourceTree = "<group>"; };
+		E81606F820AA79EF00750E3E /* TransactionWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionWatcher.swift; sourceTree = "<group>"; };
+		E81606FA20AAAB0700750E3E /* TransactionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScene.swift; sourceTree = "<group>"; };
+		E81606FC20AAAD7800750E3E /* TransactionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TransactionScene.sks; sourceTree = "<group>"; };
+		E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedFundsScene.swift; sourceTree = "<group>"; };
+		E816070020AAB9C200750E3E /* NeedFundsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = NeedFundsScene.sks; sourceTree = "<group>"; };
+		E8F84D6820A77F93003E9F8E /* CrewScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CrewScene.sks; sourceTree = "<group>"; };
+		E8F84D6A20A78130003E9F8E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		E8F84D6C20A79E2E003E9F8E /* Eth+SendTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eth+SendTransaction.swift"; sourceTree = "<group>"; };
+		E8F84D6E20A7C3B7003E9F8E /* RandomHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomHex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +183,14 @@
 				D31247F2209E459A00981CCD /* AuthScene.swift */,
 				D3B9CFE1209E43940019D863 /* BootScene.sks */,
 				D3B9CFE3209E439C0019D863 /* BootScene.swift */,
+				E8F84D6820A77F93003E9F8E /* CrewScene.sks */,
 				D37B21E4209F9E240067810B /* CrewScene.swift */,
+				E81606FC20AAAD7800750E3E /* TransactionScene.sks */,
+				E81606FA20AAAB0700750E3E /* TransactionScene.swift */,
+				E816070020AAB9C200750E3E /* NeedFundsScene.sks */,
+				E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */,
+				E81606F620AA604200750E3E /* UnitScene.sks */,
+				E81606F420AA603400750E3E /* UnitScene.swift */,
 				D31247F9209E680100981CCD /* LimitedMintableNonFungibleToken.swift */,
 				D3B9CFBD209E19550019D863 /* GameViewController.swift */,
 				D3B9CFBF209E19550019D863 /* Main.storyboard */,
@@ -173,11 +206,17 @@
 			children = (
 				D3B9CFD4209E1AE30019D863 /* BitskiSDK.h */,
 				D3B9CFDF209E38410019D863 /* Bitski.swift */,
+				E81606F820AA79EF00750E3E /* TransactionWatcher.swift */,
+				E81606F220AA5B0700750E3E /* EthereumContract.swift */,
+				E81606F020AA543600750E3E /* BigUInt+Ethereum.swift */,
 				D37B21E6209FA05F0067810B /* Bitski+StoreKit.swift */,
 				D37B21E8209FA8330067810B /* StoreKitEthereumTransaction.swift */,
 				D31247F7209E646C00981CCD /* EthereumCallFunction.swift */,
 				D31247F5209E5E4300981CCD /* BitskiProvider.swift */,
+				E8F84D6C20A79E2E003E9F8E /* Eth+SendTransaction.swift */,
 				D3B9CFD5209E1AE30019D863 /* Info.plist */,
+				E8F84D6A20A78130003E9F8E /* Parser.swift */,
+				E8F84D6E20A7C3B7003E9F8E /* RandomHex.swift */,
 			);
 			path = BitskiSDK;
 			sourceTree = "<group>";
@@ -205,7 +244,6 @@
 				D3B9CFAF209E19550019D863 /* Frameworks */,
 				D3B9CFB0209E19550019D863 /* Resources */,
 				7C4B4384115A42646E2105BD /* [CP] Embed Pods Frameworks */,
-				F8C006995DB8303D6645E3FF /* [CP] Copy Pods Resources */,
 				D3B9CFDE209E1AE30019D863 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -227,7 +265,6 @@
 				D3B9CFCE209E1AE30019D863 /* Frameworks */,
 				D3B9CFCF209E1AE30019D863 /* Headers */,
 				D3B9CFD0209E1AE30019D863 /* Resources */,
-				4BCC1077215E10616A22F013 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,10 +319,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D31247F4209E487300981CCD /* AuthScene.sks in Resources */,
+				E8F84D6920A77F93003E9F8E /* CrewScene.sks in Resources */,
 				D3B9CFC1209E19550019D863 /* Main.storyboard in Resources */,
 				D3B9CFE2209E43940019D863 /* BootScene.sks in Resources */,
 				D3B9CFC3209E19570019D863 /* Assets.xcassets in Resources */,
+				E816070120AAB9C200750E3E /* NeedFundsScene.sks in Resources */,
+				E81606F720AA604200750E3E /* UnitScene.sks in Resources */,
 				D3B9CFC6209E19570019D863 /* LaunchScreen.storyboard in Resources */,
+				E81606FD20AAAD7800750E3E /* TransactionScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,21 +376,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4BCC1077215E10616A22F013 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shared-BitskiSDK/Pods-Shared-BitskiSDK-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7C4B4384115A42646E2105BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,21 +404,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shared-ExampleNativeDApp/Pods-Shared-ExampleNativeDApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F8C006995DB8303D6645E3FF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shared-ExampleNativeDApp/Pods-Shared-ExampleNativeDApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -401,11 +412,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B9CFE4209E439C0019D863 /* BootScene.swift in Sources */,
+				E81606F520AA603400750E3E /* UnitScene.swift in Sources */,
 				D3B9CFBE209E19550019D863 /* GameViewController.swift in Sources */,
 				D31247F3209E459A00981CCD /* AuthScene.swift in Sources */,
 				D37B21E5209F9E240067810B /* CrewScene.swift in Sources */,
+				E81606FB20AAAB0700750E3E /* TransactionScene.swift in Sources */,
 				D3B9CFB6209E19550019D863 /* AppDelegate.swift in Sources */,
 				D31247FA209E680100981CCD /* LimitedMintableNonFungibleToken.swift in Sources */,
+				E81606FF20AAB9B300750E3E /* NeedFundsScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,11 +427,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E81606F320AA5B0700750E3E /* EthereumContract.swift in Sources */,
+				E8F84D6F20A7C3B7003E9F8E /* RandomHex.swift in Sources */,
 				D31247F8209E646C00981CCD /* EthereumCallFunction.swift in Sources */,
 				D31247F6209E5E4300981CCD /* BitskiProvider.swift in Sources */,
+				E81606F920AA79EF00750E3E /* TransactionWatcher.swift in Sources */,
+				E8F84D6B20A78130003E9F8E /* Parser.swift in Sources */,
 				D37B21E7209FA05F0067810B /* Bitski+StoreKit.swift in Sources */,
 				D3B9CFE0209E38410019D863 /* Bitski.swift in Sources */,
 				D37B21E9209FA8330067810B /* StoreKitEthereumTransaction.swift in Sources */,
+				E8F84D6D20A79E2E003E9F8E /* Eth+SendTransaction.swift in Sources */,
+				E81606F120AA543600750E3E /* BigUInt+Ethereum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +592,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TM2623B5AA;
+				DEVELOPMENT_TEAM = 6P9TD8XRR3;
 				INFOPLIST_FILE = ExampleNativeDApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -592,7 +612,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TM2623B5AA;
+				DEVELOPMENT_TEAM = 6P9TD8XRR3;
 				INFOPLIST_FILE = ExampleNativeDApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

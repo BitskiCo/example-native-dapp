@@ -24,7 +24,7 @@ public class Bitski {
             return provider;
         }
 
-        let httpProvider = BitskiHTTPProvider(rpcURL: URL(string: "/v1/web3/\(network)", relativeTo: apiBaseURL)!, networkName: network)
+        let httpProvider = BitskiHTTPProvider(rpcURL: URL(string: "/v1/web3/\(network)", relativeTo: apiBaseURL)!, networkName: network, redirectURL: redirectURL)
 
         setHeaders(provider: httpProvider)
 
