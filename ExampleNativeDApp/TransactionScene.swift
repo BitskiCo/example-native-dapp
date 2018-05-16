@@ -8,7 +8,7 @@
 
 import Foundation
 import SpriteKit
-import BitskiSDK
+import Bitski
 import PromiseKit
 import Web3
 

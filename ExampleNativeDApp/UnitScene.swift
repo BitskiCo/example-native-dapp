@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 import BigInt
 import Web3
-import BitskiSDK
+import Bitski
 import PromiseKit
 
 class UnitScene: SKScene {
@@ -20,8 +20,8 @@ class UnitScene: SKScene {
     private (set) var currentAccount: EthereumAddress?
     private (set) var web3: Web3?
     
-    private var deleteNode: SKNode?
-    private var backNode: SKNode?
+    private var deleteNode: SKTouchSprite?
+    private var backNode: SKTouchSprite?
     private var tokenNode: SKSpriteNode?
     
     func set(token: BigUInt, web3: Web3, currentAccount: EthereumAddress, contract: LimitedMintableNonFungibleToken) {
@@ -34,20 +34,15 @@ class UnitScene: SKScene {
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        deleteNode = childNode(withName: "DeleteButton")
-        backNode = childNode(withName: "BackButton")
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-        for touch in (touches) {
-            let location = touch.location(in: self)
-            let touchedNode = atPoint(location)
-            if touchedNode == deleteNode {
-                delete()
-            } else if touchedNode == backNode {
-                back()
-            }
+        deleteNode = childNode(withName: "DeleteButton") as? SKTouchSprite
+        deleteNode?.pressedTexture = SKTexture(imageNamed: "deleteBtnPressed")
+        deleteNode?.touchHandler = { _ in
+            self.delete()
+        }
+        backNode = childNode(withName: "BackButton") as? SKTouchSprite
+        backNode?.pressedTexture = SKTexture(imageNamed: "backBtnPressed")
+        backNode?.touchHandler = { _ in
+            self.back()
         }
     }
     

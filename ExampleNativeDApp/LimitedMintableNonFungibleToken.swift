@@ -9,7 +9,7 @@
 import Web3
 import PromiseKit
 import BigInt
-import BitskiSDK
+import Bitski
 
 enum ContractError: Error {
     case unknownBalance

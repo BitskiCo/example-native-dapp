@@ -7,7 +7,7 @@
 //
 
 import SpriteKit
-import BitskiSDK
+import Bitski
 import PromiseKit
 import Web3
 import BigInt
@@ -28,7 +28,7 @@ class CrewScene: SKScene {
     var tokenContract: LimitedMintableNonFungibleToken?
     var currentAccount: EthereumAddress?
     
-    var getMoreNode: SKNode!
+    var getMoreNode: SKTouchSprite?
     
     private var sprites: [SKSpriteNode] = []
     
@@ -46,7 +46,7 @@ class CrewScene: SKScene {
         self.tokenContract = contract
         self.currentAccount = currentAccount
         if tokens.count >= 5 {
-            getMoreNode.isHidden = true
+            getMoreNode?.isHidden = true
         }
         if let node = childNode(withName: "Title") as? SKLabelNode {
             if tokens.count == 0 {
@@ -63,7 +63,11 @@ class CrewScene: SKScene {
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        getMoreNode = childNode(withName: "GetMore")
+        getMoreNode = childNode(withName: "GetMore") as? SKTouchSprite
+        getMoreNode?.pressedTexture = SKTexture(imageNamed: "addPlayerBtnPressed")
+        getMoreNode?.touchHandler = { _ in
+            self.getMore()
+        }
     }
     
     override func didMove(to view: SKView) {
@@ -126,17 +130,5 @@ class CrewScene: SKScene {
         
         unitScene.set(token: token, web3: web3, currentAccount: currentAccount, contract: contract)
         self.view?.presentScene(unitScene)
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-        
-        for touch in (touches) {
-            
-            let location = touch.location(in: self)
-            if atPoint(location) == self.getMoreNode {
-                getMore()
-            }
-        }
     }
 }

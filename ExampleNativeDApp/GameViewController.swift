@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import BigInt
-import BitskiSDK
+import Bitski
 
 class GameViewController: UIViewController {
 
@@ -22,6 +22,7 @@ class GameViewController: UIViewController {
         bitski.signIn(viewController: self) { (accessToken, error) in
             if let error = error {
                 print(error)
+                return
             }
             
             let web3 = self.bitski.getWeb3(network: "kovan")
