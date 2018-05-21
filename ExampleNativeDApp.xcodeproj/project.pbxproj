@@ -19,10 +19,16 @@
 		D3B9CFC6209E19570019D863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFC4209E19570019D863 /* LaunchScreen.storyboard */; };
 		D3B9CFE2209E43940019D863 /* BootScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D3B9CFE1209E43940019D863 /* BootScene.sks */; };
 		D3B9CFE4209E439C0019D863 /* BootScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9CFE3209E439C0019D863 /* BootScene.swift */; };
-		E81606F520AA603400750E3E /* UnitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606F420AA603400750E3E /* UnitScene.swift */; };
-		E81606F720AA604200750E3E /* UnitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E81606F620AA604200750E3E /* UnitScene.sks */; };
-		E81606FB20AAAB0700750E3E /* TransactionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606FA20AAAB0700750E3E /* TransactionScene.swift */; };
-		E81606FD20AAAD7800750E3E /* TransactionScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E81606FC20AAAD7800750E3E /* TransactionScene.sks */; };
+		E80641B720ACC9990008F624 /* Action_Man_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E80641B320ACC9980008F624 /* Action_Man_Bold.ttf */; };
+		E80641B820ACC9990008F624 /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E80641B420ACC9980008F624 /* Action_Man.ttf */; };
+		E80641B920ACC9990008F624 /* Action_Man_Bold_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E80641B520ACC9990008F624 /* Action_Man_Bold_Italic.ttf */; };
+		E80641BA20ACC9990008F624 /* Action_Man_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E80641B620ACC9990008F624 /* Action_Man_Italic.ttf */; };
+		E80641BD20ACDB0C0008F624 /* TitleBar.sks in Resources */ = {isa = PBXBuildFile; fileRef = E80641BC20ACDB0C0008F624 /* TitleBar.sks */; };
+		E80641BF20ACDC6D0008F624 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E80641BE20ACDC6D0008F624 /* Actions.sks */; };
+		E80641C120ACF32C0008F624 /* TransactionDetails.sks in Resources */ = {isa = PBXBuildFile; fileRef = E80641C020ACF32C0008F624 /* TransactionDetails.sks */; };
+		E813FDB020AD035C0011C6C4 /* ProgressNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813FDAF20AD035C0011C6C4 /* ProgressNode.swift */; };
+		E813FDB220AD03A50011C6C4 /* PlayerLobbyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813FDB120AD03A50011C6C4 /* PlayerLobbyNode.swift */; };
+		E813FDB420AE16610011C6C4 /* TouchSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813FDB320AE16610011C6C4 /* TouchSprite.swift */; };
 		E81606FF20AAB9B300750E3E /* NeedFundsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */; };
 		E816070120AAB9C200750E3E /* NeedFundsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E816070020AAB9C200750E3E /* NeedFundsScene.sks */; };
 		E8F84D6920A77F93003E9F8E /* CrewScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8F84D6820A77F93003E9F8E /* CrewScene.sks */; };
@@ -58,10 +64,16 @@
 		D3B9CFC7209E19570019D863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3B9CFE1209E43940019D863 /* BootScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BootScene.sks; sourceTree = "<group>"; };
 		D3B9CFE3209E439C0019D863 /* BootScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootScene.swift; sourceTree = "<group>"; };
-		E81606F420AA603400750E3E /* UnitScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitScene.swift; sourceTree = "<group>"; };
-		E81606F620AA604200750E3E /* UnitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = UnitScene.sks; sourceTree = "<group>"; };
-		E81606FA20AAAB0700750E3E /* TransactionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScene.swift; sourceTree = "<group>"; };
-		E81606FC20AAAD7800750E3E /* TransactionScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TransactionScene.sks; sourceTree = "<group>"; };
+		E80641B320ACC9980008F624 /* Action_Man_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man_Bold.ttf; sourceTree = "<group>"; };
+		E80641B420ACC9980008F624 /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man.ttf; sourceTree = "<group>"; };
+		E80641B520ACC9990008F624 /* Action_Man_Bold_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man_Bold_Italic.ttf; sourceTree = "<group>"; };
+		E80641B620ACC9990008F624 /* Action_Man_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man_Italic.ttf; sourceTree = "<group>"; };
+		E80641BC20ACDB0C0008F624 /* TitleBar.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleBar.sks; sourceTree = "<group>"; };
+		E80641BE20ACDC6D0008F624 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		E80641C020ACF32C0008F624 /* TransactionDetails.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TransactionDetails.sks; sourceTree = "<group>"; };
+		E813FDAF20AD035C0011C6C4 /* ProgressNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressNode.swift; sourceTree = "<group>"; };
+		E813FDB120AD03A50011C6C4 /* PlayerLobbyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLobbyNode.swift; sourceTree = "<group>"; };
+		E813FDB320AE16610011C6C4 /* TouchSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSprite.swift; sourceTree = "<group>"; };
 		E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedFundsScene.swift; sourceTree = "<group>"; };
 		E816070020AAB9C200750E3E /* NeedFundsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = NeedFundsScene.sks; sourceTree = "<group>"; };
 		E8F84D6820A77F93003E9F8E /* CrewScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CrewScene.sks; sourceTree = "<group>"; };
@@ -117,6 +129,8 @@
 		D3B9CFB4209E19550019D863 /* ExampleNativeDApp */ = {
 			isa = PBXGroup;
 			children = (
+				E80641BB20ACDAE20008F624 /* Scenes */,
+				E813FDAE20AD03350011C6C4 /* Nodes */,
 				D3B9CFB5209E19550019D863 /* AppDelegate.swift */,
 				D31247F1209E458900981CCD /* AuthScene.sks */,
 				D31247F2209E459A00981CCD /* AuthScene.swift */,
@@ -124,20 +138,48 @@
 				D3B9CFE3209E439C0019D863 /* BootScene.swift */,
 				E8F84D6820A77F93003E9F8E /* CrewScene.sks */,
 				D37B21E4209F9E240067810B /* CrewScene.swift */,
-				E81606FC20AAAD7800750E3E /* TransactionScene.sks */,
-				E81606FA20AAAB0700750E3E /* TransactionScene.swift */,
 				E816070020AAB9C200750E3E /* NeedFundsScene.sks */,
 				E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */,
-				E81606F620AA604200750E3E /* UnitScene.sks */,
-				E81606F420AA603400750E3E /* UnitScene.swift */,
 				D31247F9209E680100981CCD /* LimitedMintableNonFungibleToken.swift */,
 				D3B9CFBD209E19550019D863 /* GameViewController.swift */,
 				D3B9CFBF209E19550019D863 /* Main.storyboard */,
 				D3B9CFC2209E19570019D863 /* Assets.xcassets */,
 				D3B9CFC4209E19570019D863 /* LaunchScreen.storyboard */,
 				D3B9CFC7209E19570019D863 /* Info.plist */,
+				E80641B220ACC7890008F624 /* Fonts */,
 			);
 			path = ExampleNativeDApp;
+			sourceTree = "<group>";
+		};
+		E80641B220ACC7890008F624 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E80641B520ACC9990008F624 /* Action_Man_Bold_Italic.ttf */,
+				E80641B320ACC9980008F624 /* Action_Man_Bold.ttf */,
+				E80641B620ACC9990008F624 /* Action_Man_Italic.ttf */,
+				E80641B420ACC9980008F624 /* Action_Man.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E80641BB20ACDAE20008F624 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E80641BC20ACDB0C0008F624 /* TitleBar.sks */,
+				E80641BE20ACDC6D0008F624 /* Actions.sks */,
+				E80641C020ACF32C0008F624 /* TransactionDetails.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E813FDAE20AD03350011C6C4 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				E813FDAF20AD035C0011C6C4 /* ProgressNode.swift */,
+				E813FDB120AD03A50011C6C4 /* PlayerLobbyNode.swift */,
+				E813FDB320AE16610011C6C4 /* TouchSprite.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,15 +243,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80641B920ACC9990008F624 /* Action_Man_Bold_Italic.ttf in Resources */,
+				E80641C120ACF32C0008F624 /* TransactionDetails.sks in Resources */,
+				E80641B720ACC9990008F624 /* Action_Man_Bold.ttf in Resources */,
 				D31247F4209E487300981CCD /* AuthScene.sks in Resources */,
+				E80641BA20ACC9990008F624 /* Action_Man_Italic.ttf in Resources */,
+				E80641BF20ACDC6D0008F624 /* Actions.sks in Resources */,
 				E8F84D6920A77F93003E9F8E /* CrewScene.sks in Resources */,
 				D3B9CFC1209E19550019D863 /* Main.storyboard in Resources */,
 				D3B9CFE2209E43940019D863 /* BootScene.sks in Resources */,
 				D3B9CFC3209E19570019D863 /* Assets.xcassets in Resources */,
 				E816070120AAB9C200750E3E /* NeedFundsScene.sks in Resources */,
-				E81606F720AA604200750E3E /* UnitScene.sks in Resources */,
+				E80641B820ACC9990008F624 /* Action_Man.ttf in Resources */,
 				D3B9CFC6209E19570019D863 /* LaunchScreen.storyboard in Resources */,
-				E81606FD20AAAD7800750E3E /* TransactionScene.sks in Resources */,
+				E80641BD20ACDB0C0008F624 /* TitleBar.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E813FDB220AD03A50011C6C4 /* PlayerLobbyNode.swift in Sources */,
 				D3B9CFE4209E439C0019D863 /* BootScene.swift in Sources */,
-				E81606F520AA603400750E3E /* UnitScene.swift in Sources */,
 				D3B9CFBE209E19550019D863 /* GameViewController.swift in Sources */,
 				D31247F3209E459A00981CCD /* AuthScene.swift in Sources */,
 				D37B21E5209F9E240067810B /* CrewScene.swift in Sources */,
-				E81606FB20AAAB0700750E3E /* TransactionScene.swift in Sources */,
+				E813FDB420AE16610011C6C4 /* TouchSprite.swift in Sources */,
+				E813FDB020AD035C0011C6C4 /* ProgressNode.swift in Sources */,
 				D3B9CFB6209E19550019D863 /* AppDelegate.swift in Sources */,
 				D31247FA209E680100981CCD /* LimitedMintableNonFungibleToken.swift in Sources */,
 				E81606FF20AAB9B300750E3E /* NeedFundsScene.swift in Sources */,

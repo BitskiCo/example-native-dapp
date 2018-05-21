@@ -9,45 +9,8 @@
 import SpriteKit
 import Bitski
 
-class SKTouchSprite: SKSpriteNode {
-    
-    var standardTexture: SKTexture?
-    var pressedTexture: SKTexture?
-    
-    var touchHandler: ((SKTouchSprite) -> Void)?
-    
-    override init(texture: SKTexture?, color: UIColor, size: CGSize) {
-        super.init(texture: texture, color: color, size: size)
-        self.standardTexture = texture
-        isUserInteractionEnabled = true
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.standardTexture = self.texture
-        isUserInteractionEnabled = true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        if let texture = pressedTexture {
-            self.texture = texture
-        }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-        if let texture = standardTexture {
-            self.texture = texture
-            touchHandler?(self)
-        }
-    }
-}
-
 class AuthScene: SKScene {
     var loginButtonNode: SKTouchSprite?
-
-    var bitski: Bitski?
 
     var signIn: (()->Void)?
 
@@ -60,5 +23,11 @@ class AuthScene: SKScene {
         loginButtonNode?.touchHandler = { _ in
             self.signIn?()
         }
+        
+        let scaleDownAction = SKAction.scale(to: 0.95, duration: 1.0)
+        let scaleUpAction = SKAction.scale(to: 1.0, duration: 1.0)
+        let sequenceAction = SKAction.sequence([scaleDownAction, scaleUpAction])
+        let loopAction = SKAction.repeatForever(sequenceAction)
+        loginButtonNode?.run(loopAction)
     }
 }

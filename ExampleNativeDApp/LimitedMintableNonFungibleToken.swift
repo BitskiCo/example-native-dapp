@@ -67,12 +67,14 @@ class LimitedMintableNonFungibleToken: EthereumContract {
     
     //MARK: - Sends
     
-    func mintNewToken(address: EthereumAddress) -> Promise<EthereumData> {
+    func mintNewToken(address: EthereumAddress) -> Promise<(BigUInt, EthereumData)> {
         let functionName = "mint(uint256)"
         do {
             let tokenID = try Web3.utils.randomHex(bytesCount: 256)
             let parameters = ["0x\(tokenID)"]
-            return self.send(functionName: functionName, parameters: parameters, fromAddress: address)
+            return self.send(functionName: functionName, parameters: parameters, fromAddress: address).map { hash in
+                return (BigUInt(tokenID, radix: 16)!, hash)
+            }
         } catch {
             return Promise(error: error)
         }

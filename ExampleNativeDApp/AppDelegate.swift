@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bitski
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

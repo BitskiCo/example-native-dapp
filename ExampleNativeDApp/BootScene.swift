@@ -23,6 +23,16 @@ class BootScene: SKScene {
         getTokens()
     }
     
+    override func sceneDidLoad() {
+        super.sceneDidLoad()
+        let loadingNode = childNode(withName: "Loading")
+        let sequence = SKAction.sequence([
+            SKAction.scale(to: 0.95, duration: 3.0),
+            SKAction.scale(to: 1.0, duration: 3.0)
+        ])
+        loadingNode?.run(SKAction.repeatForever(sequence))
+    }
+    
     func getTokens() {
         guard let web3 = web3, let tokenContract = contract else { return assertionFailure() }
         
@@ -47,8 +57,17 @@ class BootScene: SKScene {
                 }
             }
         }.catch { error in
+            self.showHomeScene()
             print("Got an error: \(error)")
         }
+    }
+    
+    func showHomeScene() {
+        guard let authScene = AuthScene(fileNamed: "AuthScene") else {
+            return assertionFailure()
+        }
+        let transition = SKTransition.crossFade(withDuration: 0.3)
+        self.view?.presentScene(authScene, transition: transition)
     }
     
     func showCrewScene(tokens: [BigUInt]) {
@@ -57,8 +76,8 @@ class BootScene: SKScene {
         }
         
         crewScene.set(tokens: tokens, web3: web3, currentAccount: currentAccount, contract: tokenContract)
-        
-        self.view?.presentScene(crewScene)
+        let transition = SKTransition.crossFade(withDuration: 0.3)
+        self.view?.presentScene(crewScene, transition: transition)
     }
     
     func showNeedFundsScene() {
@@ -67,7 +86,7 @@ class BootScene: SKScene {
         }
         
         scene.set(web3: web3, currentAddress: currentAccount, contract: tokenContract)
-        
-        self.view?.presentScene(scene)
+        let transition = SKTransition.crossFade(withDuration: 0.3)
+        self.view?.presentScene(scene, transition: transition)
     }
 }
