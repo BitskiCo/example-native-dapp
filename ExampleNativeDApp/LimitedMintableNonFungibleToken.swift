@@ -40,6 +40,7 @@ class LimitedMintableNonFungibleToken: EthereumContract {
         return firstly {
             self.call(functionName: "getOwnerTokens(address)", parameters: [address])
         }.then { callData -> Promise<[BigUInt]> in
+            print(callData, callData.hex())
             return Parser.decodeArray(hexString: callData.hex())
         }
     }

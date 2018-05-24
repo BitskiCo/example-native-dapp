@@ -12,7 +12,7 @@ abstract_target 'Shared' do
 #       pod 'Ethereum', :path => '../../OutThereLabs/Ethereum-Swift'
     #  pod 'Ethereum/PromiseKit', :git => 'https://github.com/OutThereLabs/Ethereum-Swift.git', :branch => 'develop'
     #  pod 'Ethereum/OAuth', :git => 'https://github.com/OutThereLabs/Ethereum-Swift.git', :branch => 'develop'
-    # pod 'Bitski', :path => '../BitskiSDK'
+    #pod 'Bitski', :path => '../BitskiSDK'
 #    pod 'Bitski', :git => 'https://github.com/BitskiCo/BitskiSDK.git'
     pod 'Bitski'
     pod 'Web3'
