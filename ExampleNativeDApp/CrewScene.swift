@@ -168,9 +168,11 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
         }.done { id, hash in
             self.pendingCharacter?.setCharacterID(id)
             self.pendingCharacter?.characterState = .pending
+            (self.childNode(withName: "//LoadingText") as? SKLabelNode)?.text = "Minting Token..."
             self.showTransaction(transactionHash: hash)
         }.catch { error in
-            print("Error getting more", error)
+            self.pendingCharacter?.setCharacterID(nil)
+            self.pendingCharacter?.characterState = .empty
             for sprite in self.sprites {
                 sprite.isUserInteractionEnabled = true
             }
@@ -191,9 +193,13 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
         firstly {
             contract.deleteToken(from: currentAccount, tokenID: tokenID)
         }.done { hash in
+            (self.childNode(withName: "//LoadingText") as? SKLabelNode)?.text = "Deleting Token..."
             self.showTransaction(transactionHash: hash)
         }.catch { error in
-            print(error)
+            self.deletingCharacter?.characterState = .normal
+            self.sprites.forEach { sprite in
+                sprite.isUserInteractionEnabled = true
+            }
         }
     }
     
