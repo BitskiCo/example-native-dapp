@@ -1,7 +1,7 @@
 PODS:
   - AppAuth (0.92.0)
   - BigInt.swift (1.0.0)
-  - Bitski (0.1.2):
+  - Bitski (0.1.3):
     - AppAuth (~> 0.92)
     - BigInt.swift (~> 1.0)
     - PromiseKit/CorePromise (~> 6.0)
@@ -42,7 +42,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AppAuth: 3f4f1d6d85ad631d0bbf15ffcdc10c447face97a
   BigInt.swift: 1e0ddf08d82166e72dfb0fa8d40301d273081afc
-  Bitski: 079c1c693dbd800610e175967e915da1c841b0bc
+  Bitski: 6bdc30ed285037d4edc535bffa8f38c88ce9e0aa
   CryptoSwift: bca8c5b653dcc2d9734409242a070ff53bafac86
   PromiseKit: 8245cb2e3a8fe00453e580bd4aafb57e1671f501
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
