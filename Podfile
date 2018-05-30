@@ -15,6 +15,6 @@ abstract_target 'Shared' do
     #pod 'Bitski', :path => '../BitskiSDK'
 #    pod 'Bitski', :git => 'https://github.com/BitskiCo/BitskiSDK.git'
     pod 'Bitski'
-    pod 'Web3'
-    pod 'Web3/PromiseKit'
+    pod 'Web3', :git => 'https://github.com/Boilertalk/Web3.swift.git', :branch => 'master'
+    pod 'Web3/PromiseKit', :git => 'https://github.com/Boilertalk/Web3.swift.git', :branch => 'master'
 end
