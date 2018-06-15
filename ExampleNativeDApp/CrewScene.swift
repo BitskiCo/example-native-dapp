@@ -90,6 +90,7 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(transactionStatusWasUpdated(notification:)), name: TransactionWatcher.StatusDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveEvent(notification:)), name: TransactionWatcher.DidReceiveEvent, object: nil)
     }
     
     override func didMove(to view: SKView) {
@@ -164,12 +165,12 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
         }
         
         firstly {
-            contract.mintNewToken(address: currentAccount)
+            contract.mintNewToken(from: currentAccount)
         }.done { id, hash in
             self.pendingCharacter?.setCharacterID(id)
             self.pendingCharacter?.characterState = .pending
             (self.childNode(withName: "//LoadingText") as? SKLabelNode)?.text = "Minting Token..."
-            self.showTransaction(transactionHash: hash)
+            self.showTransaction(transactionHash: hash, eventsToWatch: contract.events)
         }.catch { error in
             self.pendingCharacter?.setCharacterID(nil)
             self.pendingCharacter?.characterState = .empty
@@ -195,7 +196,7 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
             contract.deleteToken(from: currentAccount, tokenID: tokenID)
         }.done { hash in
             (self.childNode(withName: "//LoadingText") as? SKLabelNode)?.text = "Deleting Token..."
-            self.showTransaction(transactionHash: hash)
+            self.showTransaction(transactionHash: hash, eventsToWatch: contract.events)
         }.catch { error in
             self.deletingCharacter?.characterState = .normal
             self.sprites.forEach { sprite in
@@ -205,12 +206,15 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
         }
     }
     
-    func showTransaction(transactionHash: EthereumData) {
+    func showTransaction(transactionHash: EthereumData, eventsToWatch: [SolidityEvent]) {
         guard let web3 = web3 else { return assertionFailure() }
         childNode(withName: "actions")?.isHidden = true
         transactionNode?.isHidden = false
         configureForTransaction(status: .pending)
         currentTransaction = TransactionWatcher(transactionHash: transactionHash, web3: web3)
+        eventsToWatch.forEach { event in
+            currentTransaction?.startWatching(for: event)
+        }
         currentTransaction?.expectedConfirmations = 3
     }
     
@@ -328,6 +332,12 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
     @objc func transactionStatusWasUpdated(notification: Notification) {
         if let status = currentTransaction?.status {
             configureForTransaction(status: status)
+        }
+    }
+    
+    @objc func didReceiveEvent(notification: Notification) {
+        if let event = notification.userInfo?[TransactionWatcher.MatchedEventKey] {
+            print("Received event", event)
         }
     }
 }

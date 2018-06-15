@@ -19,7 +19,15 @@ PODS:
   - KSCrash/Reporting/Filters/Basic (1.15.18):
     - KSCrash/Recording
     - KSCrash/Reporting/Filters/Base
-  - PromiseKit/CorePromise (6.2.6)
+  - PromiseKit (6.3.0):
+    - PromiseKit/CorePromise (= 6.3.0)
+    - PromiseKit/Foundation (= 6.3.0)
+    - PromiseKit/UIKit (= 6.3.0)
+  - PromiseKit/CorePromise (6.3.0)
+  - PromiseKit/Foundation (6.3.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.3.0):
+    - PromiseKit/CorePromise
   - secp256k1.swift (0.1.4)
   - Sentry (3.13.0):
     - Sentry/Core (= 3.13.0)
@@ -41,22 +49,37 @@ PODS:
     - Web3/Core
 
 DEPENDENCIES:
-  - Bitski
+  - Bitski (from `https://github.com/BitskiCo/BitskiSDK.git`, branch `integration/web3-0.3.0`)
+  - PromiseKit
   - Sentry
-  - Web3
-  - Web3/PromiseKit
+  - Web3 (from `https://github.com/BitskiCo/Web3.swift.git`, branch `feature/contracts`)
+  - Web3/PromiseKit (from `https://github.com/BitskiCo/Web3.swift.git`, branch `feature/contracts`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AppAuth
     - BigInt.swift
-    - Bitski
     - CryptoSwift
     - KSCrash
     - PromiseKit
     - secp256k1.swift
     - Sentry
-    - Web3
+
+EXTERNAL SOURCES:
+  Bitski:
+    :branch: integration/web3-0.3.0
+    :git: https://github.com/BitskiCo/BitskiSDK.git
+  Web3:
+    :branch: feature/contracts
+    :git: https://github.com/BitskiCo/Web3.swift.git
+
+CHECKOUT OPTIONS:
+  Bitski:
+    :commit: 0dfc1399e8f412191ed8e3341b54023ceaec11fd
+    :git: https://github.com/BitskiCo/BitskiSDK.git
+  Web3:
+    :commit: 336a9cc1ee00d4d5f826de2da5e34eac6b060d11
+    :git: https://github.com/BitskiCo/Web3.swift.git
 
 SPEC CHECKSUMS:
   AppAuth: 3f4f1d6d85ad631d0bbf15ffcdc10c447face97a
@@ -64,11 +87,11 @@ SPEC CHECKSUMS:
   Bitski: 0461df113ec7a69449145e80fbe6a041f3cff501
   CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   KSCrash: 5394936f41e5c1ef7b79cf79b30d53299b0c160e
-  PromiseKit: 8245cb2e3a8fe00453e580bd4aafb57e1671f501
+  PromiseKit: cf84bbb1235a61473b326c5cf0b41f6828f87ba5
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   Sentry: 871762436b55524a7f109bbcdfe90d3f0812d895
   Web3: bf3c71ce4be523136df63f484001f17cbfd639b1
 
-PODFILE CHECKSUM: 58037beb3b7158e5272ec70c247c0fef41c7df78
+PODFILE CHECKSUM: 20e378b5b2b18d3e85d44304bd1af861be9713fc
 
 COCOAPODS: 1.5.3
