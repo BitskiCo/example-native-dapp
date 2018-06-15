@@ -176,6 +176,7 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
             for sprite in self.sprites {
                 sprite.isUserInteractionEnabled = true
             }
+            Logger.log(error: error, context: "Error minting token")
         }
     }
     
@@ -200,6 +201,7 @@ class CrewScene: SKScene, PlayerLobbyNodeDelegate {
             self.sprites.forEach { sprite in
                 sprite.isUserInteractionEnabled = true
             }
+            Logger.log(error: error, context: "Error deleting token")
         }
     }
     

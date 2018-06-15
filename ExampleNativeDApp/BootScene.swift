@@ -59,6 +59,7 @@ class BootScene: SKScene {
         }.catch { error in
             self.showHomeScene()
             print("Got an error: \(error)")
+            Logger.log(error: error, context: "Error loading tokens")
         }
     }
     
