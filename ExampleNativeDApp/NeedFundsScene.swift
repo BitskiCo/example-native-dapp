@@ -52,6 +52,7 @@ class NeedFundsScene: SKScene {
             }
         }.catch { error in
             print("Error loading balance", error)
+            Logger.log(error: error, context: "Error loading balance")
         }
     }
     

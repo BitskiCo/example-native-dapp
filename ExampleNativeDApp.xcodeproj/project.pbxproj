@@ -31,6 +31,7 @@
 		E813FDB420AE16610011C6C4 /* TouchSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813FDB320AE16610011C6C4 /* TouchSprite.swift */; };
 		E81606FF20AAB9B300750E3E /* NeedFundsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */; };
 		E816070120AAB9C200750E3E /* NeedFundsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E816070020AAB9C200750E3E /* NeedFundsScene.sks */; };
+		E85B786220D339C60069E3B4 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B786120D339C60069E3B4 /* Logger.swift */; };
 		E8F84D6920A77F93003E9F8E /* CrewScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8F84D6820A77F93003E9F8E /* CrewScene.sks */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		E813FDB320AE16610011C6C4 /* TouchSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSprite.swift; sourceTree = "<group>"; };
 		E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedFundsScene.swift; sourceTree = "<group>"; };
 		E816070020AAB9C200750E3E /* NeedFundsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = NeedFundsScene.sks; sourceTree = "<group>"; };
+		E85B786120D339C60069E3B4 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E8F84D6820A77F93003E9F8E /* CrewScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CrewScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 				E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */,
 				D31247F9209E680100981CCD /* LimitedMintableNonFungibleToken.swift */,
 				D3B9CFBD209E19550019D863 /* GameViewController.swift */,
+				E85B786120D339C60069E3B4 /* Logger.swift */,
 				D3B9CFBF209E19550019D863 /* Main.storyboard */,
 				D3B9CFC2209E19570019D863 /* Assets.xcassets */,
 				D3B9CFC4209E19570019D863 /* LaunchScreen.storyboard */,
@@ -292,7 +295,9 @@
 				"${BUILT_PRODUCTS_DIR}/BigInt.swift/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/Bitski/Bitski.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KSCrash/KSCrash.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
 				"${BUILT_PRODUCTS_DIR}/Web3/Web3.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework",
 			);
@@ -302,7 +307,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bitski.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSCrash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Web3.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
 			);
@@ -319,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E813FDB220AD03A50011C6C4 /* PlayerLobbyNode.swift in Sources */,
+				E85B786220D339C60069E3B4 /* Logger.swift in Sources */,
 				D3B9CFE4209E439C0019D863 /* BootScene.swift in Sources */,
 				D3B9CFBE209E19550019D863 /* GameViewController.swift in Sources */,
 				D31247F3209E459A00981CCD /* AuthScene.swift in Sources */,

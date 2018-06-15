@@ -34,11 +34,12 @@ class AuthScene: SKScene {
         guard let bitski = Bitski.shared else {
             return assertionFailure()
         }
-        bitski.signIn() { (_, error) in
+        bitski.signIn() { error in
             if error == nil {
                 self.showBootScene(web3: bitski.getWeb3(network: .kovan))
             } else {
                 print(error)
+                Logger.log(error: error, context: "Error signing in")
             }
         }
     }
