@@ -16,7 +16,7 @@ enum ContractError: Error {
     case unknownBalance
 }
 
-class LimitedMintableNonFungibleToken: GenericERC721Contract {
+class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
     
     static let contractAddress = try! EthereumAddress(hex: "0x8c51dff8fcd48c292354ee751cceabeb25357df4", eip55: false)
     
@@ -34,11 +34,11 @@ class LimitedMintableNonFungibleToken: GenericERC721Contract {
     }
     
     init(web3: Web3) {
-        super.init(name: "LimitedMintableNonFungibleToken", address: LimitedMintableNonFungibleToken.contractAddress, eth: web3.eth)
+        super.init(address: LimitedMintableNonFungibleToken.contractAddress, eth: web3.eth)
     }
     
-    required init(name: String, address: EthereumAddress?, eth: Web3.Eth) {
-        super.init(name: name, address: address, eth: eth)
+    required init(address: EthereumAddress?, eth: Web3.Eth) {
+        super.init(address: address, eth: eth)
     }
     
     //MARK: - Methods
@@ -54,16 +54,6 @@ class LimitedMintableNonFungibleToken: GenericERC721Contract {
         let outputs = [SolidityFunctionParameter(name: "_tokenIds", type: .array(type: .uint256, length: nil))]
         let function = SolidityConstantFunction(name: "getOwnerTokens", inputs: inputs, outputs: outputs, handler: self)
         return function.invoke(owner)
-    }
-    
-    func token(of owner: EthereumAddress, by index: BigUInt) -> SolidityInvocation {
-        let inputs = [
-            SolidityFunctionParameter(name: "_owner", type: .address),
-            SolidityFunctionParameter(name: "_index", type: .uint)
-        ]
-        let outputs = [SolidityFunctionParameter(name: "_tokenId", type: .uint)]
-        let function = SolidityConstantFunction(name: "tokenOfOwnerByIndex", inputs: inputs, outputs: outputs, handler: self)
-        return function.invoke(owner, index)
     }
     
     //MARK: - Convenience
@@ -96,16 +86,15 @@ class LimitedMintableNonFungibleToken: GenericERC721Contract {
         }.then { balance -> Promise<[EthereumValue]> in
             let range = (0..<balance.quantity)
             let promises = range.map { index -> Promise<EthereumValue> in
-                let indexValue = EthereumValue(integerLiteral: Int(index))
-                return self.token(of: address, by: indexValue)
+                return self.token(of: address, by: index)
             }
             return when(fulfilled: promises)
         }
     }
     
-    func token(of owner: EthereumAddress, by index: EthereumValue) -> Promise<EthereumValue> {
+    func token(of owner: EthereumAddress, by index: BigUInt) -> Promise<EthereumValue> {
         return firstly {
-            token(of: owner, by: try! BigUInt(ethereumValue: index)).call()
+            tokenOfOwnerByIndex(owner: owner, index: index).call()
         }.then { values -> Promise<EthereumValue> in
             if let tokenId = values["_tokenId"] as? BigUInt {
                 return Promise.value(tokenId.ethereumValue())

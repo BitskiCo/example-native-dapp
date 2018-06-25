@@ -1,13 +1,16 @@
 PODS:
   - AppAuth (0.92.0)
+  - BigInt (3.1.0):
+    - SipHash (~> 1.2)
   - BigInt.swift (1.0.0)
-  - Bitski (0.2.0):
+  - Bitski (0.3.0):
     - AppAuth (~> 0.92)
     - BigInt.swift (~> 1.0)
     - PromiseKit/CorePromise (~> 6.0)
     - secp256k1.swift (~> 0.1)
-    - Web3 (~> 0.2)
-    - Web3/PromiseKit (~> 0.2)
+    - Web3 (~> 0.3.0)
+    - Web3/ContractABI (~> 0.3.0)
+    - Web3/PromiseKit (~> 0.3.0)
   - CryptoSwift (0.10.0)
   - KSCrash/Core (1.15.18):
     - KSCrash/Reporting/Filters/Basic
@@ -35,63 +38,57 @@ PODS:
   - Sentry/Core (3.13.0)
   - Sentry/KSCrash (3.13.0):
     - KSCrash/Core (~> 1.15.12)
-  - Web3 (0.2.1):
-    - Web3/Core (= 0.2.1)
-    - Web3/HTTPExtension (= 0.2.1)
-  - Web3/Core (0.2.1):
-    - BigInt.swift (~> 1.0)
+  - SipHash (1.2.2)
+  - Web3 (0.3.0):
+    - Web3/Core (= 0.3.0)
+    - Web3/HTTPExtension (= 0.3.0)
+  - Web3/ContractABI (0.3.0):
+    - Web3/Core
+  - Web3/Core (0.3.0):
+    - BigInt (~> 3.1)
     - CryptoSwift (~> 0.8)
     - secp256k1.swift (~> 0.1)
-  - Web3/HTTPExtension (0.2.1):
+  - Web3/HTTPExtension (0.3.0):
     - Web3/Core
-  - Web3/PromiseKit (0.2.1):
+  - Web3/PromiseKit (0.3.0):
     - PromiseKit/CorePromise (~> 6.0)
     - Web3/Core
 
 DEPENDENCIES:
-  - Bitski (from `https://github.com/BitskiCo/BitskiSDK.git`, branch `integration/web3-0.3.0`)
+  - Bitski (= 0.3.0)
   - PromiseKit
   - Sentry
-  - Web3 (from `https://github.com/BitskiCo/Web3.swift.git`, branch `feature/contracts`)
-  - Web3/PromiseKit (from `https://github.com/BitskiCo/Web3.swift.git`, branch `feature/contracts`)
+  - Web3 (= 0.3.0)
+  - Web3/ContractABI (= 0.3.0)
+  - Web3/PromiseKit (= 0.3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AppAuth
+    - BigInt
     - BigInt.swift
+    - Bitski
     - CryptoSwift
     - KSCrash
     - PromiseKit
     - secp256k1.swift
     - Sentry
-
-EXTERNAL SOURCES:
-  Bitski:
-    :branch: integration/web3-0.3.0
-    :git: https://github.com/BitskiCo/BitskiSDK.git
-  Web3:
-    :branch: feature/contracts
-    :git: https://github.com/BitskiCo/Web3.swift.git
-
-CHECKOUT OPTIONS:
-  Bitski:
-    :commit: 0dfc1399e8f412191ed8e3341b54023ceaec11fd
-    :git: https://github.com/BitskiCo/BitskiSDK.git
-  Web3:
-    :commit: 336a9cc1ee00d4d5f826de2da5e34eac6b060d11
-    :git: https://github.com/BitskiCo/Web3.swift.git
+    - SipHash
+    - Web3
 
 SPEC CHECKSUMS:
   AppAuth: 3f4f1d6d85ad631d0bbf15ffcdc10c447face97a
+  BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   BigInt.swift: 1e0ddf08d82166e72dfb0fa8d40301d273081afc
-  Bitski: 0461df113ec7a69449145e80fbe6a041f3cff501
+  Bitski: 0da6681e5b0070fa78376fe9ec1a9b1c8ec65b44
   CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   KSCrash: 5394936f41e5c1ef7b79cf79b30d53299b0c160e
   PromiseKit: cf84bbb1235a61473b326c5cf0b41f6828f87ba5
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   Sentry: 871762436b55524a7f109bbcdfe90d3f0812d895
-  Web3: bf3c71ce4be523136df63f484001f17cbfd639b1
+  SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
+  Web3: 94f87f301a94cfb064d90baf25e2d3603c332551
 
-PODFILE CHECKSUM: 20e378b5b2b18d3e85d44304bd1af861be9713fc
+PODFILE CHECKSUM: e081456c311d9278f02f145f57708148017fa472
 
 COCOAPODS: 1.5.3
