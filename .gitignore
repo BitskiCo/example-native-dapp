@@ -2,3 +2,5 @@ Pods
 
 *.xcuserstate
 *.xcuserstate
+env-vars.sh
+*.generated.swift

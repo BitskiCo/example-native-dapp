@@ -1,0 +1,5 @@
+struct Environment {
+    static let sentryDSN = "{{ argument.sentryDSN }}"
+    static let bitskiClientID = "{{ argument.bitskiClientID }}"
+    static let bitskiRedirectURL = "{{ argument.bitskiRedirectURL }}"
+}

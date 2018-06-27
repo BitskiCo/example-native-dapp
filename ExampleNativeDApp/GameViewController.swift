@@ -11,6 +11,7 @@ import SpriteKit
 import GameplayKit
 import BigInt
 import Bitski
+import Web3
 
 class GameViewController: UIViewController {
     
@@ -57,8 +58,12 @@ class GameViewController: UIViewController {
     }
     
     func showBootScene() {
-        guard let web3 = Bitski.shared?.getWeb3(network: .kovan) else {
-            return assertionFailure()
+        guard let bitski = Bitski.shared else { return assertionFailure() }
+        let web3: Web3
+        if let network = CurrentNetwork {
+            web3 = bitski.getWeb3(network: network)
+        } else {
+            web3 = Web3(rpcURL: DevelopmentHost)
         }
         let contract = LimitedMintableNonFungibleToken(web3: web3)
         

@@ -17,17 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Bitski
-        Bitski.shared = Bitski(clientID: "35a7e890-2f64-4332-b5bc-ee556bde5cf1", redirectURL: URL(string: "bitskiexampledapp://application/callback")!)
+        Bitski.shared = Bitski(clientID: Environment.bitskiClientID, redirectURL: URL(string: Environment.bitskiRedirectURL)!)
         
         // Sentry
-        do {
-            Client.shared = try Client(dsn: "https://c85a5b193dcc453782547a721b8cb18f@sentry.io/1226739")
-            try Client.shared?.startCrashHandler()
-        } catch let error {
-            print("\(error)")
-            // Wrong DSN or KSCrash not installed
+        if !Environment.sentryDSN.isEmpty {
+            do {
+                Client.shared = try Client(dsn: Environment.sentryDSN)
+                try Client.shared?.startCrashHandler()
+            } catch let error {
+                print("\(error)")
+                // Wrong DSN or KSCrash not installed
+            }
         }
-        
         return true
     }
 

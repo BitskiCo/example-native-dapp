@@ -16,6 +16,9 @@ enum ContractError: Error {
     case unknownBalance
 }
 
+public let CurrentNetwork: Bitski.Network? = .kovan
+public let DevelopmentHost: String = "http://localhost:9545"
+
 class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
     
     static let contractAddress = try! EthereumAddress(hex: "0x8c51dff8fcd48c292354ee751cceabeb25357df4", eip55: false)

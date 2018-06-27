@@ -36,7 +36,15 @@ class AuthScene: SKScene {
         }
         bitski.signIn() { error in
             if error == nil {
-                self.showBootScene(web3: bitski.getWeb3(network: .kovan))
+                let web3: Web3
+                if let network = CurrentNetwork {
+                    // Public network
+                    web3 = bitski.getWeb3(network: network)
+                } else {
+                    // Local dev
+                    web3 = Web3(rpcURL: DevelopmentHost)
+                }
+                self.showBootScene(web3: web3)
             } else {
                 print(error)
                 Logger.log(error: error, context: "Error signing in")

@@ -12,4 +12,5 @@ abstract_target 'Shared' do
     pod 'Web3/ContractABI', '0.3.0'
     pod 'Sentry'
     pod 'PromiseKit'
+    pod 'Sourcery'
 end

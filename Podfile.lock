@@ -39,6 +39,7 @@ PODS:
   - Sentry/KSCrash (3.13.0):
     - KSCrash/Core (~> 1.15.12)
   - SipHash (1.2.2)
+  - Sourcery (0.13.1)
   - Web3 (0.3.0):
     - Web3/Core (= 0.3.0)
     - Web3/HTTPExtension (= 0.3.0)
@@ -58,6 +59,7 @@ DEPENDENCIES:
   - Bitski (= 0.3.0)
   - PromiseKit
   - Sentry
+  - Sourcery
   - Web3 (= 0.3.0)
   - Web3/ContractABI (= 0.3.0)
   - Web3/PromiseKit (= 0.3.0)
@@ -74,6 +76,7 @@ SPEC REPOS:
     - secp256k1.swift
     - Sentry
     - SipHash
+    - Sourcery
     - Web3
 
 SPEC CHECKSUMS:
@@ -87,8 +90,9 @@ SPEC CHECKSUMS:
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   Sentry: 871762436b55524a7f109bbcdfe90d3f0812d895
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
+  Sourcery: 9ef51b8777516f204d82996441f293813158d0d7
   Web3: 94f87f301a94cfb064d90baf25e2d3603c332551
 
-PODFILE CHECKSUM: e081456c311d9278f02f145f57708148017fa472
+PODFILE CHECKSUM: 66fca3faf1107c560bb2a6474f874420f6e06aa8
 
 COCOAPODS: 1.5.3

@@ -31,6 +31,7 @@
 		E813FDB420AE16610011C6C4 /* TouchSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813FDB320AE16610011C6C4 /* TouchSprite.swift */; };
 		E81606FF20AAB9B300750E3E /* NeedFundsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */; };
 		E816070120AAB9C200750E3E /* NeedFundsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E816070020AAB9C200750E3E /* NeedFundsScene.sks */; };
+		E8263EC320E43D1800013825 /* Environment.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8263EC220E43D1800013825 /* Environment.generated.swift */; };
 		E85B786220D339C60069E3B4 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B786120D339C60069E3B4 /* Logger.swift */; };
 		E8F84D6920A77F93003E9F8E /* CrewScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8F84D6820A77F93003E9F8E /* CrewScene.sks */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,8 @@
 		E813FDB320AE16610011C6C4 /* TouchSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSprite.swift; sourceTree = "<group>"; };
 		E81606FE20AAB9B300750E3E /* NeedFundsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedFundsScene.swift; sourceTree = "<group>"; };
 		E816070020AAB9C200750E3E /* NeedFundsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = NeedFundsScene.sks; sourceTree = "<group>"; };
+		E8263EBA20E418ED00013825 /* Environment.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = Environment.stencil; sourceTree = "<group>"; };
+		E8263EC220E43D1800013825 /* Environment.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.generated.swift; sourceTree = "<group>"; };
 		E85B786120D339C60069E3B4 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E8F84D6820A77F93003E9F8E /* CrewScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CrewScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +152,8 @@
 				D3B9CFC2209E19570019D863 /* Assets.xcassets */,
 				D3B9CFC4209E19570019D863 /* LaunchScreen.storyboard */,
 				D3B9CFC7209E19570019D863 /* Info.plist */,
+				E8263EBD20E43A0F00013825 /* Templates */,
+				E8263EC120E43D1800013825 /* Generated */,
 				E80641B220ACC7890008F624 /* Fonts */,
 			);
 			path = ExampleNativeDApp;
@@ -185,6 +190,22 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
+		E8263EBD20E43A0F00013825 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				E8263EBA20E418ED00013825 /* Environment.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		E8263EC120E43D1800013825 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E8263EC220E43D1800013825 /* Environment.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,6 +214,7 @@
 			buildConfigurationList = D3B9CFCA209E19570019D863 /* Build configuration list for PBXNativeTarget "ExampleNativeDApp" */;
 			buildPhases = (
 				33CA1180908134702B752A0D /* [CP] Check Pods Manifest.lock */,
+				E8263EBC20E41C3C00013825 /* ShellScript */,
 				D3B9CFAE209E19550019D863 /* Sources */,
 				D3B9CFAF209E19550019D863 /* Frameworks */,
 				D3B9CFB0209E19550019D863 /* Resources */,
@@ -321,6 +343,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shared-ExampleNativeDApp/Pods-Shared-ExampleNativeDApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E8263EBC20E41C3C00013825 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FAILED=false\n\n# Import env variables\nif [ -f $SRCROOT/env-vars.sh ]\nthen\nsource $SRCROOT/env-vars.sh\nfi\n\n# Check to make sure required variables are defined\nif [ -z \"${BITSKI_CLIENT_ID}\" ]; then\necho \"error: Missing Bitski Client ID. Make sure to export BITSKI_CLIENT_ID in ${SRCROOT}/env-vars.sh\"\nFAILED=true\nfi\n\nif [ -z \"${BITSKI_REDIRECT_URL}\" ]; then\necho \"error: Missing Bitski Redirect URL. Make sure to export BITSKI_REDIRECT_URL in ${SRCROOT}/env-vars.sh\"\nFAILED=true\nfi\n\n# Generate template with Sourcery\n$PODS_ROOT/Sourcery/bin/sourcery --templates $SRCROOT/ExampleNativeDApp/Templates --sources $SRCROOT/ExampleNativeDApp --output $SRCROOT/ExampleNativeDApp/Generated --args bitskiClientID=$BITSKI_CLIENT_ID,bitskiRedirectURL=$BITSKI_REDIRECT_URL,sentryDSN=$SENTRY_DSN\n\nif [ \"$FAILED\" = true ]; then\nexit 1\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -331,6 +366,7 @@
 				E813FDB220AD03A50011C6C4 /* PlayerLobbyNode.swift in Sources */,
 				E85B786220D339C60069E3B4 /* Logger.swift in Sources */,
 				D3B9CFE4209E439C0019D863 /* BootScene.swift in Sources */,
+				E8263EC320E43D1800013825 /* Environment.generated.swift in Sources */,
 				D3B9CFBE209E19550019D863 /* GameViewController.swift in Sources */,
 				D31247F3209E459A00981CCD /* AuthScene.swift in Sources */,
 				D37B21E5209F9E240067810B /* CrewScene.swift in Sources */,
