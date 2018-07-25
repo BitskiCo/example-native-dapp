@@ -1,10 +1,10 @@
 PODS:
-  - AppAuth (0.92.0)
+  - AppAuth (0.94.0)
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
   - BigInt.swift (1.0.0)
-  - Bitski (0.3.0):
-    - AppAuth (~> 0.92)
+  - Bitski (0.4.1):
+    - AppAuth (~> 0.93)
     - BigInt.swift (~> 1.0)
     - PromiseKit/CorePromise (~> 6.0)
     - secp256k1.swift (~> 0.1)
@@ -56,7 +56,7 @@ PODS:
     - Web3/Core
 
 DEPENDENCIES:
-  - Bitski (= 0.3.0)
+  - Bitski (= 0.4.1)
   - PromiseKit
   - Sentry
   - Sourcery
@@ -80,10 +80,10 @@ SPEC REPOS:
     - Web3
 
 SPEC CHECKSUMS:
-  AppAuth: 3f4f1d6d85ad631d0bbf15ffcdc10c447face97a
+  AppAuth: 0f099c2286a1a9754e5bd27211c43d307dc4f778
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   BigInt.swift: 1e0ddf08d82166e72dfb0fa8d40301d273081afc
-  Bitski: 0da6681e5b0070fa78376fe9ec1a9b1c8ec65b44
+  Bitski: 5e238bff9ef232e5817ce6f30e51170cb2ca3984
   CryptoSwift: 6c778d69282bed3b4e975ff97a79d074f20bb011
   KSCrash: 5394936f41e5c1ef7b79cf79b30d53299b0c160e
   PromiseKit: cf84bbb1235a61473b326c5cf0b41f6828f87ba5
@@ -93,6 +93,6 @@ SPEC CHECKSUMS:
   Sourcery: 9ef51b8777516f204d82996441f293813158d0d7
   Web3: 94f87f301a94cfb064d90baf25e2d3603c332551
 
-PODFILE CHECKSUM: 66fca3faf1107c560bb2a6474f874420f6e06aa8
+PODFILE CHECKSUM: 313c3cc5c66fae6a3794a18806b0e6258b681d53
 
 COCOAPODS: 1.5.3

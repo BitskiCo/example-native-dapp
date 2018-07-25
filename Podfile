@@ -6,7 +6,7 @@ abstract_target 'Shared' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
 
-    pod 'Bitski', '0.3.0'
+    pod 'Bitski', '0.4.1'
     pod 'Web3', '0.3.0'
     pod 'Web3/PromiseKit', '0.3.0'
     pod 'Web3/ContractABI', '0.3.0'

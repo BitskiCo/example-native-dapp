@@ -83,32 +83,9 @@ class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
         }
     }
     
-    func getTokens(address: EthereumAddress) -> Promise<[EthereumValue]> {
-        return firstly {
-            self.getBalance(address: address)
-        }.then { balance -> Promise<[EthereumValue]> in
-            let range = (0..<balance.quantity)
-            let promises = range.map { index -> Promise<EthereumValue> in
-                return self.token(of: address, by: index)
-            }
-            return when(fulfilled: promises)
-        }
-    }
-    
-    func token(of owner: EthereumAddress, by index: BigUInt) -> Promise<EthereumValue> {
-        return firstly {
-            tokenOfOwnerByIndex(owner: owner, index: index).call()
-        }.then { values -> Promise<EthereumValue> in
-            if let tokenId = values["_tokenId"] as? BigUInt {
-                return Promise.value(tokenId.ethereumValue())
-            }
-            return Promise(error: ContractError.unknownBalance)
-        }
-    }
-    
     func mintNewToken(from: EthereumAddress) -> Promise<(BigUInt, EthereumData)> {
         do {
-            let tokenHex = try Web3.utils.randomHex(bytesCount: 32)
+            let tokenHex = try randomHex(bytesCount: 32)
             let tokenID = BigUInt(hexString: tokenHex)!
             return mint(tokenId: tokenID).send(from: from, value: nil, gas: 700000, gasPrice: nil).map { hash in
                 return (tokenID, hash)
