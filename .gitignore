@@ -4,3 +4,7 @@ Pods
 *.xcuserstate
 env-vars.sh
 *.generated.swift
+
+*.xcuserstate
+
+ExampleNativeDApp.xcworkspace/xcuserdata/jp.xcuserdatad/UserInterfaceState.xcuserstate

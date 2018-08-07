@@ -16,12 +16,12 @@ enum ContractError: Error {
     case unknownBalance
 }
 
-public let CurrentNetwork: Bitski.Network? = .kovan
+public let CurrentNetwork: Bitski.Network? = .rinkeby
 public let DevelopmentHost: String = "http://localhost:9545"
 
 class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
     
-    static let contractAddress = try! EthereumAddress(hex: "0x8c51dff8fcd48c292354ee751cceabeb25357df4", eip55: false)
+    static let contractAddress = try! EthereumAddress(hex: "0xe11ccb2cc5a17aac6d1484788562efcd21a7f859", eip55: false)
     
     static let Mint = SolidityEvent(name: "Mint", anonymous: false, inputs: [
         SolidityEvent.Parameter(name: "_to", type: .address, indexed: true),
