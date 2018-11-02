@@ -21,7 +21,7 @@ public let DevelopmentHost: String = "http://localhost:9545"
 
 class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
     
-    static let contractAddress = try! EthereumAddress(hex: "0xe11ccb2cc5a17aac6d1484788562efcd21a7f859", eip55: false)
+    static let contractAddress = try! EthereumAddress(hex: "0x8F83aADB8098a1B4509aaba77ba9d2cb1aC970BA", eip55: false)
     
     static let Mint = SolidityEvent(name: "Mint", anonymous: false, inputs: [
         SolidityEvent.Parameter(name: "_to", type: .address, indexed: true),
@@ -46,17 +46,22 @@ class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
     
     //MARK: - Methods
     
-    func mint(tokenId: BigUInt) -> SolidityInvocation {
-        let inputs = [SolidityFunctionParameter(name: "_tokenId", type: .uint256)]
-        let function = SolidityNonPayableFunction(name: "mint", inputs: inputs, handler: self)
-        return function.invoke(tokenId)
+    func mintWithTokenURI(to: EthereumAddress, tokenId: BigUInt, tokenURI: String) -> SolidityInvocation {
+        let inputs = [
+            SolidityFunctionParameter(name: "_to", type: .address),
+            SolidityFunctionParameter(name: "_tokenId", type: .uint256),
+            SolidityFunctionParameter(name: "_tokenURI", type: .string)
+        ]
+        let function = SolidityNonPayableFunction(name: "mintWithTokenURI", inputs: inputs, handler: self)
+        return function.invoke(to, tokenId, tokenURI)
     }
     
-    func getOwnerTokens(owner: EthereumAddress) -> SolidityInvocation {
-        let inputs = [SolidityFunctionParameter(name: "_owner", type: .address)]
-        let outputs = [SolidityFunctionParameter(name: "_tokenIds", type: .array(type: .uint256, length: nil))]
-        let function = SolidityConstantFunction(name: "getOwnerTokens", inputs: inputs, outputs: outputs, handler: self)
-        return function.invoke(owner)
+    func burn(tokenId: BigUInt) -> SolidityInvocation {
+        let inputs = [
+            SolidityFunctionParameter(name: "tokenId", type: .uint256)
+        ]
+        let function = SolidityNonPayableFunction(name: "burn", inputs: inputs, handler: self)
+        return function.invoke(tokenId)
     }
     
     //MARK: - Convenience
@@ -74,10 +79,22 @@ class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
     
     func getOwnerTokens(address: EthereumAddress) -> Promise<[BigUInt]> {
         return firstly {
-            return self.getOwnerTokens(owner: address).call()
-        }.then { values -> Promise<[BigUInt]> in
-            if let tokens = values["_tokenIds"] as? [BigUInt] {
-                return Promise.value(tokens)
+            return self.getBalance(address: address)
+        }.then { balance -> Promise<[BigUInt]> in
+            let balanceInt = Int(balance.quantity)
+            let promises = (0..<balanceInt).map {
+                return self.getTokenId(address: address, index: $0)
+            }
+            return when(fulfilled: promises)
+        }
+    }
+    
+    func getTokenId(address: EthereumAddress, index: Int) -> Promise<BigUInt> {
+        return firstly {
+            return self.tokenOfOwnerByIndex(owner: address, index: BigUInt(index)).call()
+        }.then { values -> Promise<BigUInt> in
+            if let tokenId = values["_tokenId"] as? BigUInt {
+                return Promise.value(tokenId)
             }
             return Promise(error: ContractError.unknownBalance)
         }
@@ -87,7 +104,8 @@ class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
         do {
             let tokenHex = try randomHex(bytesCount: 32)
             let tokenID = BigUInt(hexString: tokenHex)!
-            return mint(tokenId: tokenID).send(from: from, value: nil, gas: 700000, gasPrice: nil).map { hash in
+            let tokenURI = "https://example-dapp-1-api.bitski.com/tokens/\(tokenID)"
+            return mintWithTokenURI(to: from, tokenId: tokenID, tokenURI: tokenURI).send(from: from, value: nil, gas: 1000000, gasPrice: nil).map { hash in
                 return (tokenID, hash)
             }
         } catch {
@@ -99,7 +117,7 @@ class LimitedMintableNonFungibleToken: GenericERC721Contract, EnumeratedERC721 {
         guard let to = address else {
             return Promise(error: ContractError.contractNotDeployed)
         }
-        return transfer(to: to, tokenId: tokenID).send(from: from, value: nil, gas: 700000, gasPrice: nil)
+        return burn(tokenId: tokenID).send(from: from, value: nil, gas: 700000, gasPrice: nil)
     }
     
 }
